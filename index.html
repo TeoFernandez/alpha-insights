@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Alpha Insights</title>
 </head>
 <body>
     <header>
-
         <h1>Alpha Insights</h1>
-
         <p><strong>Alpha Insights</strong> es el lugar indicado para que puedas observar los valores en bolsa en tiempo real de tus empresas favoritas de manera confiable, gratuita y sin anuncios molestos.</p>
-    
     </header>
     
     <article>
         <h2>¿En que empresa estás pensando?</h2>
 
         <div class="container">
-            <input type="txtSimbolo" placeholder="Ingresa el símbolo de la empresa (ej: AAPL, MSFT, TSLA)">
-            <button id="btnBuscar">Buscar</button>
+            <input id="txtSimbolo" type="text" placeholder="Ingresa el símbolo de la empresa (ej: AAPL, MSFT, TSLA)"> 
+            <button id="btnBuscarAccion">Buscar</button>
             <canvas id="graficoAcciones" width="200" height="100"></canvas>
         </div>
     </article>
