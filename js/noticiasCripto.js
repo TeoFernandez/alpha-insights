@@ -17,24 +17,25 @@ async function cargarNoticiasAlphaVantage() {
         const response = await fetch(url);
         const data = await response.json();
 
-        // La data de noticias viene en data.feed (según docs)
-        if (data.feed && data.feed.length > 5) {
-            ulNoticias.innerHTML = ''; // limpiar
+        if (data.feed && data.feed.length > 0) {
+            ulNoticias.innerHTML = ''; // limpio la lista
 
-            data.feed.forEach(noticia => {
+            // Uso for normal desde 0 hasta LIMIT (o menor si no hay suficientes noticias)
+            for (let i = 0; i < LIMIT && i < data.feed.length; i++) {
+                const noticia = data.feed[i];
+
                 const li = document.createElement('li');
-
-                // El link y el título suelen estar en noticia.url y noticia.title
-                // También mostramos la fuente y fecha si está disponible
                 const fecha = noticia.time_published ? new Date(noticia.time_published * 1000).toLocaleString() : 'Fecha desconocida';
                 const fuente = noticia.source ? noticia.source : 'Fuente desconocida';
 
                 li.innerHTML = `
                     <a href="${noticia.url}" target="_blank" rel="noopener noreferrer">${noticia.title}</a><br>
-                    <small>${fecha} - ${fuente}</small>
+                    </strong>${noticia.summary}</strong><br>
+                    <img src="${noticia.banner_image}"><br>
+                    <small>fuente: ${fuente}</small>
                 `;
                 ulNoticias.appendChild(li);
-            });
+            }
         } else {
             ulNoticias.innerHTML = '<li>No se encontraron noticias recientes.</li>';
         }
@@ -44,7 +45,6 @@ async function cargarNoticiasAlphaVantage() {
     }
 }
 
-// Ejecutar la carga cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     cargarNoticiasAlphaVantage();
 });
