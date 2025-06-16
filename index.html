@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Alpha Insights</title>
 </head>
@@ -12,20 +12,27 @@
         <h1>Alpha Insights</h1>
         <p><strong>Alpha Insights</strong> es el lugar indicado para que puedas observar los valores en bolsa en tiempo real de tus empresas favoritas de manera confiable, gratuita y sin anuncios molestos.</p>
     </header>
-    
-    <article>
-        <h2>¿En que empresa estás pensando?</h2>
 
+    <article>
+        <h2>¿En qué empresa estás pensando?</h2>
         <div class="container">
-            <input id="txtSimbolo" type="text" placeholder="Ingresa el símbolo de la empresa (ej: AAPL, MSFT, TSLA)"> 
+            <input id="txtSimbolo" type="text" placeholder="Ingresa el símbolo de la empresa (ej: AAPL, MSFT, TSLA)" />
+            <select id="intervalo">
+                <option value="5min">5 minutos (Intraday)</option>
+                <option value="15min">15 minutos (Intraday)</option>
+                <option value="60min" selected>60 minutos (Intraday)</option>
+                <option value="daily">Última semana (Diario)</option>
+                <option value="weekly">Último año (Semanal)</option>
+                <option value="monthly">Histórico completo (Mensual)</option>
+            </select>
             <button id="btnBuscarAccion">Buscar</button>
             <canvas id="graficoAcciones" width="200" height="100"></canvas>
         </div>
     </article>
 
     <footer>
-        <p>Este sistema fué diseñado por <strong><a href="https://fermelisoft.com.ar" target="_blank">FermeliSoft&copy; 2025</a> (Desarrollado por <a href="https://www.linkedin.com/in/teomfernandez/" target="_blank">Teo Fernández</a>)</strong> con el uso de los datos brindados por la API de <strong><a href="http://www.alphavantage.co" target="_blank">Alpha Vantage</a></strong>. </p>
-        <p>Version 2.0</p>
+        <p>Este sistema fue diseñado por <strong><a href="https://fermelisoft.com.ar" target="_blank">FermeliSoft&copy; 2025</a> (Desarrollado por <a href="https://www.linkedin.com/in/teomfernandez/" target="_blank">Teo Fernández</a>)</strong> con el uso de los datos brindados por la API de <strong><a href="http://www.alphavantage.co" target="_blank">Alpha Vantage</a></strong>.</p>
+        <p>Versión 2.0</p>
     </footer>
 
     <script type="module" src="js/app.js"></script>
