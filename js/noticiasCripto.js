@@ -32,7 +32,7 @@ async function cargarNoticiasAlphaVantage() {
                     <a href="${noticia.url}" target="_blank" rel="noopener noreferrer">${noticia.title}</a><br>
                     </strong>${noticia.summary}</strong><br>
                     <img src="${noticia.banner_image}"><br>
-                    <small>fuente: ${fuente}</small>
+                    <small>fuente: ${fuente}</small><br>
                 `;
                 ulNoticias.appendChild(li);
             }
