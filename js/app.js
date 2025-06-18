@@ -1,4 +1,4 @@
-// Constantes y referencias
+// Constantes y referencias.
 const API_KEY = "WPHHLLBSYQ0AXUFD";
 const API_BASE = "https://www.alphavantage.co/query";
 
