@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0a74da, #007bff);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Artículos */
+article {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+article h2 {
+    color: #0a74da;
+    margin-bottom: 1rem;
+}
+
+/* Input + select + botón */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.container input,
+.container select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.container button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+/* Gráfico */
+canvas#graficoAcciones {
+    margin-top: 2rem;
+    max-width: 100%;
+}
+
+/* Noticias */
+.noticias {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lista li {
+    padding: 1rem;
+    background: white;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.lista li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.lista li a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.lista li a:hover {
+    text-decoration: underline;
+}
+
+.lista li small {
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background: #e9ecef;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .container input,
+    .container select,
+    .container button {
+        flex: 1;
+    }
+
+    .container button {
+        flex: 0.5;
+    }
+}
